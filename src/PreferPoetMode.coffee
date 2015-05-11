@@ -4,7 +4,18 @@ module.exports = class PreferPoetMode
     level: 'ignore'
     message: 'Prefer poet mode'
     description: '''
-      TODO
+      This rule prohibits unneeded explicit parens on function
+      calls.
+      <pre>
+      <code># Some folks don't like this style of coding.
+      myFunction(a, b, c)
+      # And would rather it always be written like this:
+      myFunction a, b, c
+      </code>
+      </pre>
+      This rulle enforces that implicit parens be used whenever
+      possible since their use is
+      idiomatic CoffeeScript.
       '''
   constructor: ->
 
