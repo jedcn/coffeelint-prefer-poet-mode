@@ -32,7 +32,6 @@ Add the following snippet to your `coffeelint.json` config:
 
 ```json
 {
-  // other lint rules
   {
     "prefer_poet_mode": {
       "module": "coffeelint-prefer-poet-mode",
