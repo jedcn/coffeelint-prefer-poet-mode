@@ -14,7 +14,8 @@
     "coffeelint",
     "parens",
     "poetry",
-    "poet-mode"
+    "poet-mode",
+    "coffeelintrule"
   ],
   "author": "jedcn",
   "license": "MIT",
