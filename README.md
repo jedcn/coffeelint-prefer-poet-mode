@@ -32,11 +32,9 @@ Add the following snippet to your `coffeelint.json` config:
 
 ```json
 {
-  {
-    "prefer_poet_mode": {
-      "module": "coffeelint-prefer-poet-mode",
-      "level": "error"
-    }
+  "prefer_poet_mode": {
+    "module": "coffeelint-prefer-poet-mode",
+    "level": "error"
   }
 }
 ```
