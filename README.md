@@ -1,9 +1,10 @@
-# coffeelint-prefer-fewer-parens
+# coffeelint-prefer-poet-mode
 
-Also known as "poet mode."
+If you like to live safely, you should probably be explicit in your
+parens usage..
 
-You should probably be explicit in your parens usage, but sometimes
-you'd rather see less characters on the screen.
+But sometimes, sometimes you'd rather see less characters on the
+screen.
 
 So, if you look at the following:
 
@@ -17,7 +18,7 @@ And your brain is saying, no, please, why not:
 eight = Math.pow 2, 3
 ```
 
-Then this plugin might be for you.
+Then this CoffeeLint Custom Rule might be for you.
 
 ## Installation
 
@@ -33,8 +34,8 @@ Add the following snippet to your `coffeelint.json` config:
 {
   // other lint rules
   {
-    "prefer_fewer_parens": {
-      "module": "coffeelint-prefer-fewer-parens",
+    "prefer_poet_mode": {
+      "module": "coffeelint-prefer-poet-mode",
       "level": "error"
     }
   }

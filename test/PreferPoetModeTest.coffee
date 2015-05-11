@@ -1,14 +1,14 @@
 expect = require('chai').expect
-PreferFewerParens = require '../src/PreferFewerParens'
+PreferPoetMode = require '../src/PreferPoetMode'
 
 coffeelint = require 'coffeelint'
-coffeelint.registerRule PreferFewerParens
+coffeelint.registerRule PreferPoetMode
 
 config =
-  'prefer_fewer_parens':
+  'prefer_poet_mode':
     level: 'error'
 
-describe 'PreferFewerParens', ->
+describe 'PreferPoetMode', ->
 
   describe 'standalone function', ->
 

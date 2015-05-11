@@ -1,25 +1,27 @@
 {
-  "name": "coffeelint-prefer-fewer-parens",
-  "version": "1.0.0",
-  "description": "CoffeeLint Rule for People that Don't Like Parens",
+  "name": "coffeelint-prefer-poet-mode",
+  "version": "0.1.0",
+  "description": "CoffeeLint Rule for People that Like Poet Mode",
   "main": "index.js",
   "scripts": {
     "test": "gulp test"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jedcn/coffeelint-prefer-fewer-parens"
+    "url": "https://github.com/jedcn/coffeelint-prefer-poet-mode"
   },
   "keywords": [
     "coffeelint",
-    "parens"
+    "parens",
+    "poetry",
+    "poet-mode"
   ],
   "author": "jedcn",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/jedcn/coffeelint-prefer-fewer-parens/issues"
+    "url": "https://github.com/jedcn/coffeelint-prefer-poet-mode/issues"
   },
-  "homepage": "https://github.com/jedcn/coffeelint-prefer-fewer-parens",
+  "homepage": "https://github.com/jedcn/coffeelint-prefer-poet-mode",
   "devDependencies": {
     "chai": "^2.3.0",
     "gulp": "^3.8.11",

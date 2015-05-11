@@ -1,8 +1,8 @@
-module.exports = class PreferFewerParens
+module.exports = class PreferPoetMode
   rule:
-    name: 'prefer_fewer_parens'
+    name: 'prefer_poet_mode'
     level: 'ignore'
-    message: 'Prefer fewer parens'
+    message: 'Prefer poet mode'
     description: '''
       TODO
       '''
