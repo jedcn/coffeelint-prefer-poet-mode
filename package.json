@@ -4,7 +4,7 @@
   "description": "CoffeeLint Rule for People that Don't Like Parens",
   "main": "index.js",
   "scripts": {
-    "test": "mocha"
+    "test": "gulp test"
   },
   "repository": {
     "type": "git",
