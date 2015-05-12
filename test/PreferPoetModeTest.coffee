@@ -59,3 +59,26 @@ describe 'PreferPoetMode', ->
       expect(result.rule).to.equal 'prefer_poet_mode'
       expect(result.lineNumber).to.equal 2
       expect(result.line).to.equal '  alert "Hello CoffeeScript!")'
+
+  describe 'chained function invocations', ->
+
+    it 'is ok if no unneeded parens are used', ->
+      input = """
+      gulp.task 'compile', ->
+        gulp.src(src)
+          .pipe(coffee())
+          .pipe(gulp.dest('./src'))
+      """
+      results = coffeelint.lint input, config
+      expect(results.length).to.equal 0
+
+    it 'is not ok if unneeded parens are used', ->
+      input = """
+      gulp.task('compile', ->
+        gulp.src(src)
+          .pipe(coffee())
+          .pipe(gulp.dest('./src'))
+      )
+      """
+      results = coffeelint.lint input, config
+      expect(results.length).to.equal 1

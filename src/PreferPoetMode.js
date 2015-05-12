@@ -1,8 +1,14 @@
 (function() {
-  var PreferPoetMode, closingParenWasExplicit;
+  var PreferPoetMode, closingParenAtEndOfLine, closingParenWasExplicit;
 
   closingParenWasExplicit = function(token) {
     return !token.generated;
+  };
+
+  closingParenAtEndOfLine = function(token, tokenApi) {
+    var next;
+    next = tokenApi.peek(1);
+    return next[0] === 'TERMINATOR' && next[1] === '\n';
   };
 
   module.exports = PreferPoetMode = (function() {
@@ -18,7 +24,7 @@
     PreferPoetMode.prototype.tokens = ['CALL_END'];
 
     PreferPoetMode.prototype.lintToken = function(token, tokenApi) {
-      if (closingParenWasExplicit(token)) {
+      if (closingParenAtEndOfLine(token, tokenApi) && closingParenWasExplicit(token)) {
         return {
           context: 'found explicit function invocation'
         };

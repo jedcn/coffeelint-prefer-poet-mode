@@ -1,6 +1,10 @@
 closingParenWasExplicit = (token) ->
   not token.generated
 
+closingParenAtEndOfLine = (token, tokenApi) ->
+  next = tokenApi.peek 1
+  next[0] is 'TERMINATOR' and next[1] is '\n'
+
 module.exports = class PreferPoetMode
   rule:
     name: 'prefer_poet_mode'
@@ -24,5 +28,5 @@ module.exports = class PreferPoetMode
   tokens: ['CALL_END']
 
   lintToken: (token, tokenApi) ->
-    if closingParenWasExplicit token
+    if closingParenAtEndOfLine(token, tokenApi) and closingParenWasExplicit token
       context: 'found explicit function invocation'
