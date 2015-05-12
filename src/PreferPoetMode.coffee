@@ -1,3 +1,6 @@
+closingParenWasExplicit = (token) ->
+  not token.generated
+
 module.exports = class PreferPoetMode
   rule:
     name: 'prefer_poet_mode'
@@ -13,13 +16,13 @@ module.exports = class PreferPoetMode
       myFunction a, b, c
       </code>
       </pre>
-      This rulle enforces that implicit parens be used whenever
-      possible since their use is
-      idiomatic CoffeeScript.
+      This rule enforces that implicit parens be used whenever
+      possible since their use is idiomatic CoffeeScript.
       '''
   constructor: ->
 
   tokens: ['CALL_END']
 
   lintToken: (token, tokenApi) ->
-    callEndwasGenerated = token.generated
+    if closingParenWasExplicit token
+      context: 'found explicit function invocation'
