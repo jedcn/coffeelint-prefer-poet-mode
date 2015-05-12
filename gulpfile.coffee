@@ -20,4 +20,4 @@ gulp.task('watch', ->
   gulp.watch([src, test], ['test'])
 )
 
-gulp.task('default', ['test'])
+gulp.task('default', ['compile', 'test'])
