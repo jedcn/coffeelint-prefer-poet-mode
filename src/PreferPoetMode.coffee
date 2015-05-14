@@ -1,12 +1,12 @@
-twoParensTogether = (tokenApi) ->
-  prior = tokenApi.peek -1
+twoParensTogether = (api) ->
+  prior = api.peek -1
   prior[0] is 'CALL_START' and prior[1] is '('
 
 closingParenWasExplicit = (token) ->
   not token.generated
 
-closingParenAtEndOfLine = (token, tokenApi) ->
-  next = tokenApi.peek 1
+closingParenAtEndOfLine = (api) ->
+  next = api.peek 1
   next[0] is 'TERMINATOR' and next[1] is '\n'
 
 module.exports = class PreferPoetMode
@@ -31,9 +31,9 @@ module.exports = class PreferPoetMode
 
   tokens: ['CALL_END']
 
-  lintToken: (token, tokenApi) ->
+  lintToken: (token, api) ->
 
-    return if twoParensTogether tokenApi
+    return if twoParensTogether api
 
-    if closingParenAtEndOfLine(token, tokenApi) and closingParenWasExplicit token
+    if closingParenAtEndOfLine(api) and closingParenWasExplicit token
       context: 'found explicit function invocation'

@@ -1,9 +1,9 @@
 (function() {
   var PreferPoetMode, closingParenAtEndOfLine, closingParenWasExplicit, twoParensTogether;
 
-  twoParensTogether = function(tokenApi) {
+  twoParensTogether = function(api) {
     var prior;
-    prior = tokenApi.peek(-1);
+    prior = api.peek(-1);
     return prior[0] === 'CALL_START' && prior[1] === '(';
   };
 
@@ -11,9 +11,9 @@
     return !token.generated;
   };
 
-  closingParenAtEndOfLine = function(token, tokenApi) {
+  closingParenAtEndOfLine = function(api) {
     var next;
-    next = tokenApi.peek(1);
+    next = api.peek(1);
     return next[0] === 'TERMINATOR' && next[1] === '\n';
   };
 
@@ -29,11 +29,11 @@
 
     PreferPoetMode.prototype.tokens = ['CALL_END'];
 
-    PreferPoetMode.prototype.lintToken = function(token, tokenApi) {
-      if (twoParensTogether(tokenApi)) {
+    PreferPoetMode.prototype.lintToken = function(token, api) {
+      if (twoParensTogether(api)) {
         return;
       }
-      if (closingParenAtEndOfLine(token, tokenApi) && closingParenWasExplicit(token)) {
+      if (closingParenAtEndOfLine(api) && closingParenWasExplicit(token)) {
         return {
           context: 'found explicit function invocation'
         };
