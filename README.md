@@ -24,7 +24,7 @@ and you look at code like this:
 eight = Math.pow(2, 3)
 ```
 
-And you think, "Argh! That's ghastly! Why not write it like this?"
+And you think, "Argh! That's ghastly!" and you quickly change it to:
 
 ```coffeescript
 eight = Math.pow 2, 3
@@ -32,10 +32,16 @@ eight = Math.pow 2, 3
 
 Phew! So much better.
 
-And if you think like this, well, this [coffeelint][coffeelint.org]
-custom rule might be for you.
+And some people get you-- you hang around together and talk about
+"aesthetics." But other people do not get you. That's OK. Adventure
+isn't for everyone.
+
+So-- if you think like this, well,.. this [coffeelint][coffeelint.org]
+rule might be for you.
 
 [coffeelint.org]: http://www.coffeelint.org/
+
+You'll be DTRP before you know it.
 
 ## Installation
 
@@ -43,9 +49,9 @@ custom rule might be for you.
    problems.
 1. Add this module as a `devDependency`: `npm install -D coffeelint-prefer-poet-mode`.
 2. Update your `coffeelint.json` configuration file as described below.
-3. Modify coffeelint to use this customm rule. For example, If you run
-   `coffeelint` from the command line, you might do this:
-   `--rules node_modules/coffeelint-prefer-poet-mode`
+3. Modify coffeelint to use this custom rule. For example, If you run
+   `coffeelint` from the command line, you might do this: `coffeelint --rules
+   node_modules/coffeelint-prefer-poet-mode`
 
 ## Configuration
 
