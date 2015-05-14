@@ -25,7 +25,8 @@ module.exports = class PreferPoetMode
       </code>
       </pre>
       This rule enforces that implicit parens be used whenever
-      possible since their use is idiomatic CoffeeScript.
+      a line ends with a function invocation with one or more
+      arguments.
       '''
   constructor: ->
 
