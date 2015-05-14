@@ -12,6 +12,10 @@ describe 'PreferPoetMode', ->
 
   describe 'acceptable inputs', ->
 
+    it 'is ok with a fn invocation without args', ->
+      results = coffeelint.lint 'alert()', config
+      expect(results.length).to.equal 0
+
     it 'is ok with a basic fn invocation', ->
       results = coffeelint.lint 'alert "Hello CoffeeScript!"', config
       expect(results.length).to.equal 0
