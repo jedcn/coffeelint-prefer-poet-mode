@@ -4,7 +4,8 @@
   "description": "CoffeeLint Rule for People that Like Poet Mode",
   "main": "index.js",
   "scripts": {
-    "test": "gulp test"
+    "lint": "coffeelint --rules index.js -f coffeelint.json src test gulpfile.coffee",
+    "test": "npm run lint && gulp test"
   },
   "repository": {
     "type": "git",
