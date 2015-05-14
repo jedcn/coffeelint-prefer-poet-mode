@@ -14,18 +14,23 @@ But sometimes, **sometimes..**
 
 You pay close attention to the characters on the screen.
 
-You develop a taste that every **single character** matters, and you
-look at code like this:
+And then you start paying as much attention to whitespace as you do to
+the non-whitespace.
+
+And once you start thinking that every **single character** matters,
+and you look at code like this:
 
 ```coffeescript
 eight = Math.pow(2, 3)
 ```
 
-And you think, "C'mon! Why not write it lke this:"
+And you think, "Argh! That's ghastly! Why not write it like this?"
 
 ```coffeescript
 eight = Math.pow 2, 3
 ```
+
+Phew! So much better.
 
 And if you think like this, well, this [coffeelint][coffeelint.org]
 custom rule might be for you.
@@ -40,7 +45,7 @@ custom rule might be for you.
 2. Update your `coffeelint.json` configuration file as described below.
 3. Modify coffeelint to use this customm rule. For example, If you run
    `coffeelint` from the command line, you might do this:
-   `--rules node_modules/coffeelint-prefer-poet-mode/src/PreferPoetMode.js`
+   `--rules node_modules/coffeelint-prefer-poet-mode`
 
 ## Configuration
 
