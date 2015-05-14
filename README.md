@@ -7,6 +7,10 @@
 
 ---
 
+:zap: :zap: :zap:
+
+---
+
 If you like to live safely, you should probably be explicit in your
 paren usage..
 
@@ -30,7 +34,7 @@ And you think, "Argh! That's ghastly!" and you quickly change it to:
 eight = Math.pow 2, 3
 ```
 
-Phew! So much better.
+Phew! So much better. What a relief.
 
 And some people get you-- you hang around together and talk about
 "aesthetics." But other people do not get you. That's OK. Adventure
