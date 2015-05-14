@@ -1,30 +1,46 @@
 # coffeelint-prefer-poet-mode
 
+[![Circle CI](https://circleci.com/gh/jedcn/coffeelint-prefer-poet-mode.svg?style=svg)](https://circleci.com/gh/jedcn/coffeelint-prefer-poet-mode)
+
+    It takes courage to grow up and become who you really are.
+    - e e cummings
+
+---
+
 If you like to live safely, you should probably be explicit in your
-parens usage..
+paren usage..
 
-But sometimes, sometimes you'd rather see less characters on the
-screen.
+But sometimes, **sometimes..**
 
-So, if you look at the following:
+You pay close attention to the characters on the screen.
+
+You develop a taste that every **single character** matters, and you
+look at code like this:
 
 ```coffeescript
 eight = Math.pow(2, 3)
 ```
 
-And your brain is saying, no, please, why not:
+And you think, "C'mon! Why not write it lke this:"
 
 ```coffeescript
 eight = Math.pow 2, 3
 ```
 
-Then this CoffeeLint Custom Rule might be for you.
+And if you think like this, well, this [coffeelint][coffeelint.org]
+custom rule might be for you.
+
+[coffeelint.org]: http://www.coffeelint.org/
 
 ## Installation
 
-0. Setup CoffeeLint in your project and verify that it is working.
-1. Add this module as a `devDependency`: `npm install -D coffee-lint-prefer-fewer-parens`
-2. Update your `coffeelint.json` configuration file
+0. Setup CoffeeLint in your project and verify that works and uncovers
+   problems.
+1. Add this module as a `devDependency`: `npm install -D coffeelint-prefer-poet-mode`.
+2. Update your `coffeelint.json` configuration file as described below.
+3. Modify coffeelint to use this customm rule. For example, If you run
+   `coffeelint` from the command line, you might do this:
+   `--rules node_modules/coffeelint-prefer-poet-mode/src/PreferPoetMode.js`
 
 ## Configuration
 
@@ -34,7 +50,7 @@ Add the following snippet to your `coffeelint.json` config:
 {
   "prefer_poet_mode": {
     "module": "coffeelint-prefer-poet-mode",
-    "level": "error"
+    "level": "warn"
   }
 }
 ```
