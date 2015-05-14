@@ -60,7 +60,7 @@ describe 'PreferPoetMode', ->
       expect(result.lineNumber).to.equal 1
       expect(result.line).to.equal 'Math.pow(2, 3)'
 
-    it 'rejects a fn invocation that takes an fn as an arg with unneeded parens', ->
+    it 'rejects an invocation that takes a fn arg with unneeded parens', ->
       input = '''
       runLater(->
         alert "Hello CoffeeScript!")
@@ -72,7 +72,7 @@ describe 'PreferPoetMode', ->
       expect(result.lineNumber).to.equal 2
       expect(result.line).to.equal '  alert "Hello CoffeeScript!")'
 
-    it 'rejects mixed explicit/implict paren usage if the last is not implicit', ->
+    it 'rejects mixed explicit/implict parens if last use is explicit', ->
       input = """
       gulp.task('compile', ->
         gulp.src(src)
