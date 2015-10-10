@@ -1,5 +1,7 @@
 # coffeelint-prefer-poet-mode
 
+[![Circle CI](https://circleci.com/gh/jedcn/coffeelint-prefer-poet-mode.svg?style=svg)](https://circleci.com/gh/jedcn/coffeelint-prefer-poet-mode)
+
 This project has been restarted as
 [coffeelint-prefer-fewer-parens][github-prefer-fewer-parens], and
 prefer-fewer-parens has been published
