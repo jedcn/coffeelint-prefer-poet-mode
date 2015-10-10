@@ -1,6 +1,6 @@
 {
   "name": "coffeelint-prefer-poet-mode",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "CoffeeLint Rule for People that Like Poet Mode",
   "main": "index.js",
   "scripts": {
